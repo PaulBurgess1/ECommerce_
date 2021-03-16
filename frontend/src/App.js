@@ -1,8 +1,8 @@
 import React from "react";
 import {BrowserRouter, Link, Route} from "react-router-dom"
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
-import data from './data.js';
+//import data from './data.js';
 import HomeScreen from "./Screens/HomeScreen";
 import ProductScreen from "./Screens/ProductScreen";
 

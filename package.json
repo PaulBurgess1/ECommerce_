@@ -1,0 +1,29 @@
+{
+  "name": "ecommerce_",
+  "version": "1.0.0",
+  "description": "ECommerce project by Paul Burgess",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch backend --exec babel-node backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PaulBurgess1/ECommerce_.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PaulBurgess1/ECommerce_/issues"
+  },
+  "homepage": "https://github.com/PaulBurgess1/ECommerce_#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/node": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "nodemon": "^2.0.7"
+  }
+}
