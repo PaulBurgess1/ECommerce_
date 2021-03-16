@@ -8,6 +8,9 @@ body{
   margin: 0;
 
 }
+#root{
+  height: 100%;
+}
 a{
   text-decoration: none;
 }
@@ -40,9 +43,13 @@ a:hover{
   font-weight: bold;
   text-decoration: inherit;
 }
+.home a:hover{
+  color:#ff8000
+}
 .header-links a{
   color:inherit;
   text-decoration: inherit;
+  padding-left: 2rem;
 }
 .header-links a:hover{
   color:#ff8000
@@ -133,4 +140,54 @@ a:hover{
   position: absolute;
   right: 0.5rem;
   top:1.5rem;
+}
+/*Product Details Page*/
+.details{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+.details img{
+  flex: 2 1 60rem;
+  max-width: 60rem;
+  width:100%;
+  border: 0.1rem  #c0c0c0 solid;
+}
+.details-info{
+  flex: 2 1 60rem;
+  width: auto;
+  border: 0.1rem  #c0c0c0 solid;
+}
+.details-actions{
+  flex: 2 1 60rem;
+  width: auto;
+  border: 0.1rem  #c0c0c0 solid;
+  border-radius: 0.5rem;
+  background-color: #f0e2e2f0;
+  padding: 1rem;
+}
+.details-actions ul, .details-info ul{
+  list-style-type: none;
+}
+.details-actions li, .details-info li{
+  margin-bottom: 1rem;
+}
+.details-return{
+  padding-left: 1rem;
+}
+.details-actions ul li:last-child{
+  display: flex;
+  flex-direction: column;
+}
+.add-to-cart-button{
+  padding: 1rem;
+  border: .1rem #808080 solid;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: orange;
+}
+.add-to-cart-button:hover{
+  border: 0.1rem #404040 solid;
 }
