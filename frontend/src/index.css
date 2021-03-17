@@ -175,7 +175,7 @@ a:hover{
   margin-bottom: 1rem;
 }
 .details-return{
-  padding-left: 1rem;
+  padding: 1rem;
 }
 .details-actions ul li:last-child{
   display: flex;

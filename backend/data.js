@@ -9,7 +9,8 @@ export default {
         brand:"Nike",
         rating: 3.5,
         numReviews: 3,
-        instock: "Yes"
+        instock: "Yes",
+        stock: 5
     },
     {
         _id:"2",
@@ -20,7 +21,7 @@ export default {
         brand:"Pepsi",
         rating: 5,
         numReviews: 24,
-        instock: "Yes"
+        stock: 8
     },
     {
         _id:"3",
@@ -31,7 +32,7 @@ export default {
         brand:"Nike",
         rating: 3.5,
         numReviews: 3,
-        instock: "No"
+        stock: 0
     },
     {
         _id:"4",
@@ -42,7 +43,7 @@ export default {
         brand:"Nike",
         rating: 3.5,
         numReviews: 3,
-        instock: "Yes"
+        stock: 23
     },
 ]
 
