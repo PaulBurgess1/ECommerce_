@@ -46,7 +46,10 @@ function ProductScreen(props){
             <div className="details-actions">
                 <ul>
                     <li>Price: $ {product.price}</li>
-                    <li>InStock: {product.stock > 0? "Yes": "No"}</li>
+                    <li>InStock: {product.stock > 0? <font color='Green'>Yes</font> 
+                    :
+                    <font color='Red'>No</font> 
+                    }</li>
                     <li>
                         Quanity:
                         <select value={qty} onChange={(e) => {setQty(e.target.value)}}>
@@ -61,7 +64,7 @@ function ProductScreen(props){
                             Add to Cart
                         </button>
                     :
-                    <div>Out of Stock</div>    
+                    <div className="Out-of-stock"><b>Out of Stock</b></div>    
                     }
                         
                     </li>
