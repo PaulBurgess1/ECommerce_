@@ -39,12 +39,18 @@ a:hover{
 }
 .home a{
   color:#ffffff;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
   text-decoration: inherit;
 }
 .home a:hover{
   color:#ff8000
+}
+.logo{
+  color: #ff8000;
+  display:inline;
+  font-size: 4rem;
+  text-align: center;
 }
 .header-links a{
   color:inherit;
@@ -181,15 +187,26 @@ a:hover{
   display: flex;
   flex-direction: column;
 }
-.add-to-cart-button{
+.button-main{
   padding: 1rem;
   border: .1rem #808080 solid;
   border-radius: 0.5rem;
   cursor: pointer;
   background-color: orange;
+  min-width: 100%;
 }
-.add-to-cart-button:hover{
+.button-main:hover{
   border: 0.1rem #404040 solid;
+}
+.button-secondary{
+  padding: 1rem;
+  border: .1rem #808080 solid;
+  background-color: rgb(253, 253, 253);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  min-width: 90%;
+  text-align: center;
+
 }
 .Out-of-stock{
   padding: 1rem;
@@ -251,10 +268,48 @@ a:hover{
   flex: 8 1;
   margin-left: 1rem;
 }
-.checkout-button{
+.cartSizeIndicator{
+  display:inline;
+  color: #ffffff;
+  border-radius: 50%;
+  border: 0.1rem #000000 solid;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.5rem;
+  background-color:red;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-right: 0.5rem;
+}
+/* Signin nad Register forms*/
+.form{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height: 100%;
+}
+.form-container{
+  display: inherit;
+  flex-direction: column;
+  border: 0.1rem darkorange solid;
+  background-color: lightgoldenrodyellow;
+  width: 32rem;
+  padding: 2rem;
+  border-radius: 0.1rem;
+  list-style-type: none;
+}
+.form-container li{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.form-container li h3{
+  text-align: center;
+  font-size: 2.5rem;
+}
+input{
   padding: 1rem;
-  border: .1rem #808080 solid;
+  border: 0.1rem peru solid;
   border-radius: 0.5rem;
-  cursor: pointer;
-  background-color: orange;
+  min-width: 90%;
 }

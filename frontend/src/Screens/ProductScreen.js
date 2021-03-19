@@ -60,7 +60,7 @@ function ProductScreen(props){
                     </li>
                     <li>
                         {product.stock > 0? 
-                        <button onClick={handleAddToCart} className="add-to-cart-button">
+                        <button onClick={handleAddToCart} className="button-main">
                             Add to Cart
                         </button>
                     :
