@@ -21,8 +21,8 @@ const isAuth = (req,res, next) =>{
                 return res.status(401).send({msg: "Invalid Token."});
             }
             req.user =decode;
-            next();
-            return;
+            
+            return next();
         });
     }
     else{
@@ -30,11 +30,11 @@ const isAuth = (req,res, next) =>{
     }
 }
 
-const isAdmin =(req,res,next)=>{
-    if(req.user && req.user.isAdmin){
+const isAdmin =(req,res,user,next)=>{
+    if(user && user.isAdmin){
         return next();
     }
-    return res.status(401).send({msg: "Admin Token is invalid"});
+    return res.status(403).send({msg: "Admin Token is invalid"});
 }
 
 export {

@@ -15,8 +15,9 @@ const reducer =combineReducers({
     cart: cartReducer,
     userSignin: userSigninReducer,
     userRegister: userRegisterReducer,
+    productDelete: productDeleteReducer,
     productSave: productSaveReducer,
-    productDelete: productDeleteReducer
+    
 })
 const composeEnhancer = compose; //window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || 
 const store = createStore(reducer, initalState, composeEnhancer(applyMiddleware(thunk)));

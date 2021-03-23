@@ -14,6 +14,7 @@ function RegisterScreen(props){
     const dispatch = useDispatch();
 
     useEffect(() => {
+        document.title = "Not Amazon - Register"
         if(userInfo){
             props.history.push("/");
         }

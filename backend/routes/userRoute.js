@@ -1,5 +1,6 @@
 import express from 'express';
 import User from "../models/userModel"
+import {getToken} from "../util"
 
 const router = express.Router();
 
@@ -10,6 +11,7 @@ router.post("/signin", async (req, res)=>{
         //Hashing?
         password: req.body.password
         });
+        console.log({signinUser})
         if(signinUser){
             res.send({
                 _id: signinUser.id,
@@ -65,6 +67,7 @@ router.get("/createadmin",async (req, res) =>{
         });
         const newUser =await user.save();
         res.send(newUser);
+        alert("Admin Made")
     } catch (error) {
         res.send({msg: error.message});
     }

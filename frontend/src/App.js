@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import Cookie from "js-cookie";
 import {BrowserRouter, Link, Route} from "react-router-dom"
 //import logo from './logo.svg';
 import './App.css';
@@ -25,6 +26,10 @@ function App() {
   const closeMenu=()=>{
     document.querySelector(".sidebar").classList.remove("open")
   }
+  const logout=()=>{
+    Cookie.set('userInfo', null);
+    window.location.reload();
+  }
   return (
       <BrowserRouter>
     <div className="grid-container">
@@ -46,6 +51,11 @@ function App() {
                 :
                 <Link to="/signin">Login</Link>
             }
+            {
+            userInfo && userInfo.name ? <Link onClick={logout}>Logout</Link>
+            :
+            <div></div>
+            }
             
             
         </div>
@@ -60,7 +70,7 @@ function App() {
     </aside>
     <main className="main">
         <div className="content">
-            <Route path="/products" component={ProductsScreen}/>
+            <Route path="/productsAdmin" component={ProductsScreen}/>
             <Route path="/signin" component={SigninScreen}/>
             <Route path="/register" component={RegisterScreen}/>
             <Route path="/products/:id" component={ProductScreen} />

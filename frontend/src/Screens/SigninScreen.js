@@ -7,12 +7,13 @@ import {signin} from "../actions/userActions"
 
 function SigninScreen(props){
     const [email, setEmail] =useState('');
-    const [passsword, setPassword] = useState('');
+    const [password, setPassword] = useState('');
     const userSignin = useSelector(state=>state.userSignin);
     const {loading, userInfo, error} = userSignin;
     const dispatch = useDispatch();
 
     useEffect(() => {
+        document.title = "Not Amazon - Signin"
         if(userInfo){
             props.history.push("/");
         }
@@ -22,7 +23,7 @@ function SigninScreen(props){
     }, [userInfo]);
     const submitHandler =(e) =>{
         e.preventDefault();
-        dispatch(signin(email,passsword));
+        dispatch(signin(email,password));
     }
 
     return <div className="form">

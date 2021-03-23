@@ -17,7 +17,7 @@ function ProductsScreen(props) {
     const [stock, setStock] = useState('');
     const [description, setDescription] = useState('');
     const productList = useSelector(state => state.productList);
-    const { loading, products, error } = ProductList;
+    const { loading, products, error } = productList;
 
     const productSave = useSelector(state => state.productSave);
     const { loading: loadingSave, success: successSave, error: errorSave } = productSave;
@@ -27,6 +27,7 @@ function ProductsScreen(props) {
     const dispatch = useDispatch();
 
     useEffect(() => {
+        document.title = "Not Amazon - Product Admin"
         if(successSave){
             setModelVisable(false);
         }
@@ -51,6 +52,7 @@ function ProductsScreen(props) {
     
     const submitHandler = (e) => {
         e.preventDefault();
+        alert("submit Handler")
         dispatch(saveProduct({_id:id,name, price, image, brand, category, stock, description}));
     }
     const deleteHandler =(product) =>{
@@ -60,7 +62,8 @@ function ProductsScreen(props) {
     return <div className="content content-margined">
     <div className="product-header">
         <h3>Products</h3>
-        <button className="button-main" onClick={()=>openModel({})}>Create Product</button>
+        
+        <div><button className="button-main" onClick={()=>openModel({})}>Create Product</button></div>
     </div>
     {modelVisible &&
     <div className="form">
@@ -71,7 +74,7 @@ function ProductsScreen(props) {
             </li>
             <li>
                 {loadingSave && <div>Loading...</div>}
-                {errorSave && <div>{error}</div>}
+                {errorSave && <div>{errorSave}</div>}
             </li>
             <li>
                 <label htmlFor="name">Name:</label>
@@ -130,7 +133,7 @@ function ProductsScreen(props) {
                         </tr>
                     </thead>
                     <tbody>
-                        {productList.map(product => (
+                        {products.map(product => (
                             <tr key={product._id}>
                             <td>{product._id}</td>
                             <td>{product.name}</td>

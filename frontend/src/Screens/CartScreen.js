@@ -16,6 +16,7 @@ function CartScreen(props){
         dispatch(removeFromCart(productId));
     }
     useEffect(() =>{
+        document.title = "Not Amazon - Cart"
         if(productId){
             dispatch(addToCart(productId, qty));
         }

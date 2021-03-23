@@ -14,6 +14,7 @@ function ProductScreen(props){
     const dispatch = useDispatch();
 
     useEffect(() => {
+        document.title = "Not Amazon - Product"
         dispatch(detailsProduct(props.match.params.id));
         return () => {
             //Do nothing

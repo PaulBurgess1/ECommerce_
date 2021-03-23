@@ -13,6 +13,7 @@ function HomeScreen(props){
     const dispatch =useDispatch();
     //React hook
     useEffect(()=>{
+        document.title = "Not Amazon - Homepage"
         dispatch(listProducts());
         return () =>{
             //
